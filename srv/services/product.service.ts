@@ -9,12 +9,9 @@ export class ProdutoService {
         this.productRepository = productRepository;
     }
 
-    async criar(produto:): Promise<Array<Product>> {
+    async criar(produto: Product): Promise<String | undefined> {
 
-        this.productRepository.create()
-        const as: Promise<Array<Product>> = new Promise((resolve, reject) => {
-            // código aqui
-        });
-        return await as;
+        return this.productRepository.create(produto);
+        
     }
 }
