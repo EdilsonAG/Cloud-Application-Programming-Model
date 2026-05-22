@@ -1,5 +1,5 @@
 import { ProductRepository } from '../repositories/product.repository';
-import { ProdutoService } from '../services/product.service';
+import { ProdutoService } from '../services/ProductService'
 
 export class ProductHandler {
     //private repositorio: ProductRepository
