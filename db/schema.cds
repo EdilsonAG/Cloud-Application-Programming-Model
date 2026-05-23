@@ -3,14 +3,14 @@ using { managed } from '@sap/cds/common';
 namespace app;
 
 entity Users : managed {
-  id: Integer;
+  key  id: Integer;
   email: String not null;
   password: String;
   name: String not null;
 }
 
 entity Products : managed {
-  id: Integer;
+  key id: Integer;
   name: String not null;
   description: String;
   price: Decimal(10, 2) not null;
@@ -20,7 +20,7 @@ entity Products : managed {
 }
 
 entity Orders : managed {
-  id: Integer;          
+  key id: Integer;          
   orderNumber: String;
   total_price: Decimal(10, 2);
 

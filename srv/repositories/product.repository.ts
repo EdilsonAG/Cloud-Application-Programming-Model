@@ -1,4 +1,4 @@
-import { cds } from '@sap/cds';
+import  cds  from '@sap/cds';
 import { Product } from '../models/product.model';
 
 export class ProductRepository {
@@ -6,7 +6,7 @@ export class ProductRepository {
 
     async findAll(): Promise<Product[]> {
         try {
-            const products: Array<Product> = await this.db.run(cds.SELECT.from('Products'));
+            const products: Array<Product> = await this.db.run(cds.SELECT.from('app.Products'));
 
             return products.map(p => {
                 const produto: Product = new Product();
@@ -26,7 +26,7 @@ export class ProductRepository {
 
         try {
             const result: Product = await this.db.run(
-                 cds.INSERT.into('Products').entries({
+                 cds.INSERT.into('app.Products').entries({
                     name: produto.name,
                     description: produto.description,
                     price: produto.price,

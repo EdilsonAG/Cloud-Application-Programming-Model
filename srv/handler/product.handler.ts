@@ -11,7 +11,7 @@ export class ProductHandler {
     }
 
     registerHandlers(srv: any): void {
-        srv.on('CREATE', 'Products', async (req: any) => {
+        srv.on('CREATE','Products', async (req: any) => {
             try {
                 const id = await this.service.criar(req.data);
                 return { ID: id, ...req.data };

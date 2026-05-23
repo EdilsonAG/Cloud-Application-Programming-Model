@@ -1,4 +1,4 @@
-import { cds } from '@sap/cds';
+import  cds  from '@sap/cds';
 import { ProductHandler } from './handler/product.handler';
 
 export default cds.service.impl((srv) => {
